@@ -336,9 +336,8 @@ $whonix_build_script_skip_package_install${reset}"
    fi
 
    if [ "$ANON_BUILD_INSTALL_TO_ROOT" = "1" ] || [ "$WHONIX_BUILD_QUBES" = "true" ]; then
-      true "${cyan}INFO: ANON_BUILD_INSTALL_TO_ROOT is set to 1 or WHONIX_BUILD_QUBES is set to true, skipping installation of anon-shared-build-fix-grub, grub-screen-resolution and grub-output-verbose, ok.${reset}"
+      true "${cyan}INFO: ANON_BUILD_INSTALL_TO_ROOT is set to 1 or WHONIX_BUILD_QUBES is set to true, skipping installation of grub-screen-resolution and grub-output-verbose, ok.${reset}"
    else
-      pkg-install-maybe anon-shared-build-fix-grub
       pkg-install-maybe grub-screen-resolution
       pkg-install-maybe grub-output-verbose
    fi
@@ -360,8 +359,9 @@ $whonix_build_script_skip_package_install${reset}"
       fi
       if [ "$WHONIX_BUILD_QCOW2" = "true" ]; then
          pkg-install-maybe spice-vdagent
+         pkg-install-maybe qxl-xorg-enhance
       else
-         true "${cyan}INFO: skipping installation of weak recommended guest additions package spice-vdagent, because not using --target qcow2, ok.${reset}"
+         true "${cyan}INFO: skipping installation of weak recommended guest additions packages spice-vdagent and qxl-xorg-enhance because not using --target qcow2, ok.${reset}"
       fi
    fi
 
@@ -405,7 +405,11 @@ $whonix_build_script_skip_package_install${reset}"
       pkg-install-maybe anon-gateway-packages-recommended
       pkg-install-maybe whonix-gateway-packages-dependencies
       pkg-install-maybe whonix-gateway-packages-recommended
-      pkg-install-maybe whonix-gateway
+      if [ "$WHONIX_BUILD_QUBES" = "true" ]; then
+         pkg-install-maybe qubes-whonix-gateway
+      else
+         pkg-install-maybe non-qubes-whonix-gateway
+      fi
    elif [ "$WHONIX_BUILD_WORKSTATION" = "1" ]; then
       pkg-install-maybe anon-shared-build-inst-tb
       pkg-install-maybe anon-workstation-packages-dependencies
@@ -413,7 +417,11 @@ $whonix_build_script_skip_package_install${reset}"
       pkg-install-maybe anon-workstation-default-applications
       pkg-install-maybe whonix-workstation-packages-dependencies
       pkg-install-maybe whonix-workstation-packages-recommended
-      pkg-install-maybe whonix-workstation
+      if [ "$WHONIX_BUILD_QUBES" = "true" ]; then
+         pkg-install-maybe qubes-whonix-workstation
+      else
+         pkg-install-maybe non-qubes-whonix-workstation
+      fi
    else
       error "${red}${bold}ERROR: Neither WHONIX_BUILD_GATEWAY nor WHONIX_BUILD_WORKSTATION is set to 1. Please report this bug!${reset}"
    fi

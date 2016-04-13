@@ -18,10 +18,6 @@
         path = packages/anon-gw-base-files
         url = https://github.com/Whonix/anon-gw-base-files.git
 
-[submodule "packages/anon-gw-build-upgrade-tor"]
-        path = packages/anon-gw-build-upgrade-tor
-        url = https://github.com/Whonix/anon-gw-build-upgrade-tor.git
-
 [submodule "packages/anon-gw-dhcp-conf"]
         path = packages/anon-gw-dhcp-conf
         url = https://github.com/Whonix/anon-gw-dhcp-conf.git
@@ -61,34 +57,6 @@
 [submodule "packages/anon-shared-build-apt-sources-tpo"]
         path = packages/anon-shared-build-apt-sources-tpo
         url = https://github.com/Whonix/anon-shared-build-apt-sources-tpo.git
-
-[submodule "packages/anon-shared-build-ban-nonfree"]
-        path = packages/anon-shared-build-ban-nonfree
-        url = https://github.com/Whonix/anon-shared-build-ban-nonfree.git
-
-[submodule "packages/anon-shared-build-fix-grub"]
-        path = packages/anon-shared-build-fix-grub
-        url = https://github.com/Whonix/anon-shared-build-fix-grub.git
-
-[submodule "packages/anon-shared-build-inst-tb"]
-        path = packages/anon-shared-build-inst-tb
-        url = https://github.com/Whonix/anon-shared-build-inst-tb.git
-
-[submodule "packages/anon-shared-build-log-build-version"]
-        path = packages/anon-shared-build-log-build-version
-        url = https://github.com/Whonix/anon-shared-build-log-build-version.git
-
-[submodule "packages/anon-shared-build-remember-sources"]
-        path = packages/anon-shared-build-remember-sources
-        url = https://github.com/Whonix/anon-shared-build-remember-sources.git
-
-[submodule "packages/anon-shared-build-sanity-checks"]
-        path = packages/anon-shared-build-sanity-checks
-        url = https://github.com/Whonix/anon-shared-build-sanity-checks.git
-
-[submodule "packages/anon-shared-build-upgrade-torsocks"]
-        path = packages/anon-shared-build-upgrade-torsocks
-        url = https://github.com/Whonix/anon-shared-build-upgrade-torsocks.git
 
 [submodule "packages/anon-shared-helper-scripts"]
         path = packages/anon-shared-helper-scripts
@@ -138,14 +106,6 @@
         path = packages/apparmor-profile-pidgin
         url = https://github.com/Whonix/apparmor-profile-pidgin.git
 
-[submodule "packages/apparmor-profile-sdwdate"]
-        path = packages/apparmor-profile-sdwdate
-        url = https://github.com/Whonix/apparmor-profile-sdwdate.git
-
-[submodule "packages/apparmor-profile-timesync"]
-        path = packages/apparmor-profile-timesync
-        url = https://github.com/Whonix/apparmor-profile-timesync.git
-
 [submodule "packages/apparmor-profile-torbrowser"]
         path = packages/apparmor-profile-torbrowser
         url = https://github.com/Whonix/apparmor-profile-torbrowser.git
@@ -154,13 +114,13 @@
         path = packages/apparmor-profile-virtualbox
         url = https://github.com/Whonix/apparmor-profile-virtualbox.git
 
-[submodule "packages/apparmor-profile-whonixcheck"]
-        path = packages/apparmor-profile-whonixcheck
-        url = https://github.com/Whonix/apparmor-profile-whonixcheck.git
-
 [submodule "packages/apparmor-profile-xchat"]
         path = packages/apparmor-profile-xchat
         url = https://github.com/Whonix/apparmor-profile-xchat.git
+
+[submodule "packages/apt-during-apt"]
+        path = packages/apt-during-apt
+        url = https://github.com/Whonix/apt-during-apt.git
 
 [submodule "packages/bootclockrandomization"]
         path = packages/bootclockrandomization
@@ -302,6 +262,10 @@
         path = packages/qubes-whonix
         url = https://github.com/Whonix/qubes-whonix.git
 
+[submodule "packages/qxl-xorg-enhance"]
+        path = packages/qxl-xorg-enhance
+        url = https://github.com/Whonix/qxl-xorg-enhance.git
+
 [submodule "packages/rads"]
         path = packages/rads
         url = https://github.com/Whonix/rads.git
@@ -318,13 +282,9 @@
         path = packages/sdwdate-gui
         url = https://github.com/Whonix/sdwdate-gui.git
 
-[submodule "packages/sdwdate-plugin-anon-shared-con-check"]
-        path = packages/sdwdate-plugin-anon-shared-con-check
-        url = https://github.com/Whonix/sdwdate-plugin-anon-shared-con-check.git
-
-[submodule "packages/sdwdate-plugin-anon-shared-streamiso"]
-        path = packages/sdwdate-plugin-anon-shared-streamiso
-        url = https://github.com/Whonix/sdwdate-plugin-anon-shared-streamiso.git
+[submodule "packages/security-misc"]
+        path = packages/security-misc
+        url = https://github.com/Whonix/security-misc.git
 
 [submodule "packages/shared-folder-help"]
         path = packages/shared-folder-help
@@ -349,10 +309,6 @@
 [submodule "packages/tb-updater"]
         path = packages/tb-updater
         url = https://github.com/Whonix/tb-updater.git
-
-[submodule "packages/tcp-timestamps-disable"]
-        path = packages/tcp-timestamps-disable
-        url = https://github.com/Whonix/tcp-timestamps-disable.git
 
 [submodule "packages/timesanitycheck"]
         path = packages/timesanitycheck
